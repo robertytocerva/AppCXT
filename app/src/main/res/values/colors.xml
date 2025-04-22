@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Paleta principal de la app -->
+    <color name="btnPrincipal">#FF5252</color>
+    <color name="btnSecundario">#69F0AE</color>
+    <color name="txtPrincipal">#263238</color>
+    <color name="txtSecundario">#FFFFFF</color>
+    <color name="iconAcent">#FFAB40</color>
+    <color name="cardView">#E3F2FD</color>
+    <color name="sombras">#1E88E5</color>
+
+    <!-- Colores para gradientes fondo principal-->
+    <color name="gradiente1">#42A5F5</color>
+    <color name="gradiente2">#FFCA28</color>
+    <color name="gradiente3">#AB47BC</color>
+    <color name="gradiente4">#26C6DA</color>
+
+    <!-- Colores para gradientes pantalla de carga-->
+    <color name="GradienteCarga1">#74B3A7</color>
+    <color name="GradienteCarga2">#6e98bc</color>
+    <color name="GradienteCarga3">#E6E1CF</color>
+
+
+
+</resources>

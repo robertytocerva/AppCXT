@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">CXT</string>
+
+    <!-- Genearal-->
+    <string name="tvCorreo">Correo:</string>
+    <string name="tvContrasena">Contraseña:</string>
+    <string name="exampleEmail">nata@ct.mx</string>
+
+    <!--Login-->
+    <string name="loginTitle">¡Hola!</string>
+    <string name="loginSubtitle">Ingresa a tu cuenta</string>
+    <string name="btnIngresar">Ingresar</string>
+    <string name="btnCrearCuenta">Registrarse</string>
+
+</resources>

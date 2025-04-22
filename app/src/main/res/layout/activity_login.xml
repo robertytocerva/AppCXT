@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradiente_animado"
+    tools:context=".Login">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/iniHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".05"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/q1Horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/midHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".50"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/q3Horizontal3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.65" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/q3Horizontal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.79" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/q3Horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.87" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/finHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".95"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/iniVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/midVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/finVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".9" />
+
+    <Button
+        android:id="@+id/btnCrearCuenta"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/btnSecundario"
+        android:fontFamily="@font/principal_font"
+        android:text="@string/btnCrearCuenta"
+        android:textColor="@color/txtPrincipal"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/finHorizontal"
+        app:layout_constraintEnd_toStartOf="@+id/finVertical"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="@+id/iniVertical"
+        app:layout_constraintTop_toTopOf="@+id/q3Horizontal"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/btnPrincipal"
+        android:fontFamily="@font/principal_font"
+        android:text="@string/btnIngresar"
+        android:textColor="@color/txtPrincipal"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/q3Horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/finVertical"
+        app:layout_constraintStart_toStartOf="@+id/iniVertical"
+        app:layout_constraintTop_toTopOf="@+id/q3Horizontal2" />
+
+    <EditText
+        android:id="@+id/etCorreo"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/cardView"
+        android:ems="10"
+        android:fontFamily="@font/principal_font"
+        android:inputType="text"
+        android:text="@string/exampleEmail"
+        android:textColor="@color/txtSecundario"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/q3Horizontal3"
+        app:layout_constraintEnd_toStartOf="@+id/finVertical"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="@+id/iniVertical" />
+
+    <TextView
+        android:id="@+id/tvCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/principal_font"
+        android:text="@string/tvCorreo"
+        android:textColor="@color/txtPrincipal"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/etCorreo"
+        app:layout_constraintEnd_toStartOf="@+id/midVertical"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toStartOf="@+id/iniVertical"
+        app:layout_constraintTop_toTopOf="@+id/midHorizontal"
+        app:layout_constraintVertical_bias="0.55" />
+
+    <TextView
+        android:id="@+id/tvContrasena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/principal_font"
+        android:text="@string/tvContrasena"
+        android:textColor="@color/txtPrincipal"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/midVertical"
+        app:layout_constraintStart_toStartOf="@+id/iniVertical"
+        app:layout_constraintTop_toTopOf="@+id/q3Horizontal3" />
+
+    <EditText
+        android:id="@+id/etContrasena"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/cardView"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="fsfsf"
+        android:textColor="@color/txtSecundario"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/q3Horizontal2"
+        app:layout_constraintEnd_toStartOf="@+id/finVertical"
+        app:layout_constraintStart_toStartOf="@+id/iniVertical"
+        app:layout_constraintTop_toBottomOf="@+id/tvContrasena" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toTopOf="@+id/q1Horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/finVertical"
+        app:layout_constraintStart_toStartOf="@+id/iniVertical"
+        app:layout_constraintTop_toTopOf="@+id/iniHorizontal"
+        app:srcCompat="@drawable/logo_cxt" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bits_font"
+        android:text="@string/loginTitle"
+        android:textColor="@color/txtPrincipal"
+        android:textSize="50dp"
+        app:layout_constraintEnd_toStartOf="@+id/finVertical"
+        app:layout_constraintStart_toStartOf="@+id/iniVertical"
+        app:layout_constraintTop_toTopOf="@+id/q1Horizontal" />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loginSubtitle"
+        android:textColor="@color/txtPrincipal"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/principal_font"
+        app:layout_constraintBottom_toTopOf="@+id/midHorizontal"
+        app:layout_constraintEnd_toStartOf="@+id/finVertical"
+        app:layout_constraintStart_toStartOf="@+id/iniVertical"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
