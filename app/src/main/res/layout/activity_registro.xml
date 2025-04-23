@@ -27,21 +27,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.4" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/q3Horizontal3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.48" />
+        app:layout_constraintGuide_percent="0.38" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/q3Horizontal2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.79" />
+        app:layout_constraintGuide_percent="0.83" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/finHorizontal"
@@ -87,13 +80,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/bits_font"
-        android:text="@string/registroTitle"
-        android:textColor="@color/txtPrincipal"
-        android:textSize="40sp"
         android:shadowColor="@color/sombras"
         android:shadowDx="5"
         android:shadowDy="3"
         android:shadowRadius="4"
+        android:text="@string/registroTitle"
+        android:textColor="@color/txtPrincipal"
+        android:textSize="45sp"
         app:layout_constraintStart_toStartOf="@+id/iniVertical"
         app:layout_constraintTop_toTopOf="@+id/iniHorizontal" />
 
@@ -124,7 +117,7 @@
         android:fontFamily="@font/principal_font"
         android:text="@string/tvNombre"
         android:textColor="@color/txtPrincipal"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:shadowColor="@color/sombras"
         android:shadowDx="4"
         android:shadowDy="2"
@@ -135,39 +128,37 @@
     <EditText
         android:id="@+id/etNameRegistro"
         android:layout_width="300dp"
-        android:layout_height="36dp"
+        android:layout_height="wrap_content"
         android:ems="10"
+        android:fontFamily="@font/principal_font"
         android:inputType="text"
         android:text="@string/exampleName"
         android:textColor="@color/txtSecundario"
         android:textSize="15sp"
-        android:fontFamily="@font/principal_font"
-        app:layout_constraintBottom_toTopOf="@+id/q3Horizontal3"
         app:layout_constraintEnd_toStartOf="@+id/finVertical"
         app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="@+id/iniVertical"
-        app:layout_constraintTop_toBottomOf="@+id/tvNameRegistro"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/tvNameRegistro" />
 
     <TextView
         android:id="@+id/tvApellidoRegistro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/principal_font"
-        android:text="@string/tvApellido"
-        android:textColor="@color/txtPrincipal"
-        android:textSize="18sp"
         android:shadowColor="@color/sombras"
         android:shadowDx="4"
         android:shadowDy="2"
         android:shadowRadius="2"
+        android:text="@string/tvApellido"
+        android:textColor="@color/txtPrincipal"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/iniVertical"
-        app:layout_constraintTop_toTopOf="@+id/q3Horizontal3" />
+        app:layout_constraintTop_toBottomOf="@+id/etNameRegistro" />
 
     <EditText
         android:id="@+id/etApellidoRegistro"
         android:layout_width="300dp"
-        android:layout_height="36dp"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
         android:text="@string/exampleLastName"
@@ -189,14 +180,14 @@
         android:shadowRadius="2"
         android:text="@string/tvCorreo"
         android:textColor="@color/txtPrincipal"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/iniVertical"
         app:layout_constraintTop_toBottomOf="@+id/etApellidoRegistro" />
 
     <EditText
         android:id="@+id/etCorreoRegistro"
         android:layout_width="300dp"
-        android:layout_height="36dp"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:fontFamily="@font/principal_font"
         android:inputType="text"
@@ -217,7 +208,7 @@
         android:shadowDy="2"
         android:shadowRadius="2"
         android:text="@string/tvTelefono"
-        android:textSize="18dp"
+        android:textSize="20dp"
         android:textColor="@color/txtPrincipal"
         app:layout_constraintStart_toStartOf="@+id/iniVertical"
         app:layout_constraintTop_toBottomOf="@+id/etCorreoRegistro" />
@@ -225,7 +216,7 @@
     <EditText
         android:id="@+id/etTelefonoRegistro"
         android:layout_width="300dp"
-        android:layout_height="36dp"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:fontFamily="@font/principal_font"
         android:inputType="phone"
@@ -247,26 +238,29 @@
         android:shadowRadius="2"
         android:text="@string/tvContrasena"
         android:textColor="@color/txtPrincipal"
-        android:textSize="18dp"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="@+id/iniVertical"
         app:layout_constraintTop_toBottomOf="@+id/etTelefonoRegistro" />
 
     <EditText
         android:id="@+id/etContrasenaRegistro"
         android:layout_width="300dp"
-        android:layout_height="36dp"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:fontFamily="@font/principal_font"
         android:inputType="textPassword"
         android:text="@string/examplePassword"
         android:textColor="@color/txtSecundario"
         android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/q3Horizontal2"
         app:layout_constraintEnd_toStartOf="@+id/finVertical"
+        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="@+id/iniVertical"
-        app:layout_constraintTop_toBottomOf="@+id/tvContrasenaRegistro" />
+        app:layout_constraintTop_toBottomOf="@+id/tvContrasenaRegistro"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnRegistrar"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/btnPrincipal"
@@ -284,7 +278,7 @@
         app:layout_constraintTop_toTopOf="@+id/q3Horizontal2" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnCancelar"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -301,7 +295,7 @@
         app:layout_constraintEnd_toStartOf="@+id/finVertical"
         app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="@+id/iniVertical"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrar" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
