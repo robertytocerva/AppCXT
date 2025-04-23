@@ -1,15 +1,32 @@
 <resources>
     <string name="app_name">CXT</string>
 
+    <!--Datos de ejemplo-->
+    <string name="exampleEmail">nata@ct.mx</string>
+    <string name="examplePassword">123456</string>
+    <string name="exampleName">Zitacuaro</string>
+    <string name="exampleLastName">Michi</string>
+
     <!-- Genearal-->
     <string name="tvCorreo">Correo:</string>
     <string name="tvContrasena">Contraseña:</string>
-    <string name="exampleEmail">nata@ct.mx</string>
+    <string name="tvNombre">Nombre(s):</string>
+    <string name="tvApellido">Apellido(s):</string>"
+    <string name="tvTelefono">Teléfono:</string>
+    <string name="btnCancelar">Cancelar</string>
+
 
     <!--Login-->
     <string name="loginTitle">¡Hola!</string>
     <string name="loginSubtitle">Ingresa a tu cuenta</string>
     <string name="btnIngresar">Ingresar</string>
     <string name="btnCrearCuenta">Registrarse</string>
+
+    <!--Registro-->
+    <string name="registroTitle">Crea tu cuenta</string>
+    <string name="registroSubtitle">Ingresa tus datos</string>
+    <string name="btnRegistrar">Registrarse e ingresar</string>
+
+
 
 </resources>

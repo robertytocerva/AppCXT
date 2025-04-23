@@ -4,10 +4,10 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- Paleta principal de la app -->
-    <color name="btnPrincipal">#FF5252</color>
-    <color name="btnSecundario">#69F0AE</color>
+    <color name="btnSecundario">#FF5252</color>
+    <color name="btnPrincipal">#69F0AE</color>
     <color name="txtPrincipal">#263238</color>
-    <color name="txtSecundario">#FFFFFF</color>
+    <color name="txtSecundario">#535657</color>
     <color name="iconAcent">#FFAB40</color>
     <color name="cardView">#E3F2FD</color>
     <color name="sombras">#1E88E5</color>
