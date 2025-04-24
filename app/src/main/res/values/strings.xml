@@ -26,8 +26,16 @@
     <!--Registro-->
     <string name="registroTitle">Crea tu cuenta</string>
     <string name="registroSubtitle">Ingresa tus datos</string>
-    <string name="btnRegistrar">Registrarse e ingresar</string>
-
-
-
+    <string name="btnRegistrar">Continuar</string>
+    
+    <!--RegisroNino-->
+    <string name="tvRegistroNinoTitle">Datos tutorado</string>
+    <string name="tvRegistroNinoSubtitle">A un paso de la diversión</string>
+    <string name="btnRegistrarNino">Registrarse e ingresar</string>
+    <string name="tvCondición">Condición:</string>
+    <string name="tvEdad">Edad:</string>
+    <string name="l1">Ninguna</string>
+    <string name="l2">Mov. Limitada</string>
+    <string name="l3">TDAH</string>
+    <string name="l4">Autismo(Exsperimental)</string>
 </resources>

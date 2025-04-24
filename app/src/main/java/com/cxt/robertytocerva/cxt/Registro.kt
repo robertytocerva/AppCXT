@@ -56,7 +56,8 @@ class Registro : AppCompatActivity() {
         }
 
         btnRegistrar.setOnClickListener {
-
+            startActivity(Intent(this, RegistroNino::class.java))
+            finish()
         }
         btnCancelar.setOnClickListener {
             startActivity(Intent(this, Login::class.java))

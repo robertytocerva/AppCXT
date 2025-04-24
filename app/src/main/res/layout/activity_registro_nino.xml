@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradiente_animado"
-    tools:context=".Registro">
+    tools:context=".RegistroNino">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/iniHorizontal"
@@ -30,7 +30,7 @@
         app:layout_constraintGuide_percent="0.38" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/q3Horizontal2"
+        android:id="@+id/q3Horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -41,7 +41,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:backgroundTint="@color/black"
         app:layout_constraintGuide_percent=".95"/>
 
     <androidx.constraintlayout.widget.Guideline
@@ -65,18 +64,8 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent=".9" />
 
-    <ImageView
-        android:id="@+id/imgLogoRegistro"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        app:layout_constraintBottom_toTopOf="@+id/midHorizontal"
-        app:layout_constraintEnd_toStartOf="@+id/finVertical"
-        app:layout_constraintStart_toStartOf="@+id/iniVertical"
-        app:layout_constraintTop_toTopOf="@+id/q1Horizontal"
-        app:srcCompat="@drawable/persona_login" />
-
     <TextView
-        android:id="@+id/tvTitleRegistro"
+        android:id="@+id/tvTitleNino"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/bits_font"
@@ -84,14 +73,46 @@
         android:shadowDx="5"
         android:shadowDy="3"
         android:shadowRadius="4"
-        android:text="@string/registroTitle"
+        android:text="@string/tvRegistroNinoTitle"
         android:textColor="@color/txtPrincipal"
         android:textSize="45sp"
         app:layout_constraintStart_toStartOf="@+id/iniVertical"
         app:layout_constraintTop_toTopOf="@+id/iniHorizontal" />
 
     <TextView
-        android:id="@+id/tvSubtitleRegistro"
+        android:id="@+id/tvSubtitleNino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/principal_font"
+        android:shadowColor="@color/sombras"
+        android:shadowDx="4"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="@string/tvRegistroNinoSubtitle"
+        android:textColor="@color/txtSecundario"
+        android:textSize="25sp"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintHorizontal_bias="1.0"
+
+        app:layout_constraintBottom_toTopOf="@+id/q1Horizontal"
+        app:layout_constraintStart_toStartOf="@+id/iniVertical"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleNino" />
+
+    <ImageView
+        android:id="@+id/imgLogoRegistroNino"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/midHorizontal"
+        app:layout_constraintEnd_toStartOf="@+id/finVertical"
+
+        app:layout_constraintStart_toStartOf="@+id/iniVertical"
+        app:layout_constraintTop_toTopOf="@+id/q1Horizontal"
+
+        app:srcCompat="@drawable/icon_nino" />
+
+    <TextView
+        android:id="@+id/tvNameRegistroNino"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/principal_font"
@@ -99,34 +120,14 @@
         android:shadowDx="4"
         android:shadowDy="2"
         android:shadowRadius="2"
-        android:text="@string/registroSubtitle"
-        android:textColor="@color/txtSecundario"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/q1Horizontal"
-        app:layout_constraintEnd_toStartOf="@+id/midVertical"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/iniVertical"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitleRegistro"
-        app:layout_constraintVertical_bias="0.468" />
-
-    <TextView
-        android:id="@+id/tvNameRegistro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/principal_font"
         android:text="@string/tvNombre"
         android:textColor="@color/txtPrincipal"
         android:textSize="20sp"
-        android:shadowColor="@color/sombras"
-        android:shadowDx="4"
-        android:shadowDy="2"
-        android:shadowRadius="2"
         app:layout_constraintStart_toStartOf="@+id/iniVertical"
         app:layout_constraintTop_toTopOf="@+id/midHorizontal" />
 
     <EditText
-        android:id="@+id/etNameRegistro"
+        android:id="@+id/etNameRegistroNino"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -136,12 +137,11 @@
         android:textColor="@color/txtSecundario"
         android:textSize="15sp"
         app:layout_constraintEnd_toStartOf="@+id/finVertical"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/iniVertical"
-        app:layout_constraintTop_toBottomOf="@+id/tvNameRegistro" />
+        app:layout_constraintTop_toBottomOf="@+id/tvNameRegistroNino" />
 
     <TextView
-        android:id="@+id/tvApellidoRegistro"
+        android:id="@+id/tvApellidoRegistroNino"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/principal_font"
@@ -153,24 +153,24 @@
         android:textColor="@color/txtPrincipal"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/iniVertical"
-        app:layout_constraintTop_toBottomOf="@+id/etNameRegistro" />
+        app:layout_constraintTop_toBottomOf="@+id/etNameRegistroNino" />
 
     <EditText
-        android:id="@+id/etApellidoRegistro"
+        android:id="@+id/etApellidoRegistroNino"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:fontFamily="@font/principal_font"
         android:inputType="text"
         android:text="@string/exampleLastName"
         android:textColor="@color/txtSecundario"
         android:textSize="15sp"
-        android:fontFamily="@font/principal_font"
         app:layout_constraintEnd_toStartOf="@+id/finVertical"
         app:layout_constraintStart_toStartOf="@+id/iniVertical"
-        app:layout_constraintTop_toBottomOf="@+id/tvApellidoRegistro" />
+        app:layout_constraintTop_toBottomOf="@+id/tvApellidoRegistroNino" />
 
     <TextView
-        android:id="@+id/tvCorreoRegistro"
+        android:id="@+id/tvEdadRegistroNino"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/principal_font"
@@ -178,107 +178,73 @@
         android:shadowDx="4"
         android:shadowDy="2"
         android:shadowRadius="2"
-        android:text="@string/tvCorreo"
+        android:text="@string/tvEdad"
         android:textColor="@color/txtPrincipal"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/iniVertical"
-        app:layout_constraintTop_toBottomOf="@+id/etApellidoRegistro" />
+        app:layout_constraintTop_toBottomOf="@+id/etApellidoRegistroNino" />
 
     <EditText
-        android:id="@+id/etCorreoRegistro"
+        android:id="@+id/etEdadRegistroNino"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:fontFamily="@font/principal_font"
-        android:inputType="text"
-        android:text="@string/exampleEmail"
+        android:inputType="number"
+        android:text="00"
         android:textColor="@color/txtSecundario"
         android:textSize="15sp"
         app:layout_constraintEnd_toStartOf="@+id/finVertical"
         app:layout_constraintStart_toStartOf="@+id/iniVertical"
-        app:layout_constraintTop_toBottomOf="@+id/tvCorreoRegistro" />
+        app:layout_constraintTop_toBottomOf="@+id/tvEdadRegistroNino" />
 
     <TextView
-        android:id="@+id/tvTelefonoRegistro"
+        android:id="@+id/CondicionNino"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/principal_font"
+        android:textColor="@color/txtPrincipal"
         android:shadowColor="@color/sombras"
         android:shadowDx="4"
         android:shadowDy="2"
         android:shadowRadius="2"
-        android:text="@string/tvTelefono"
-        android:textSize="20dp"
-        android:textColor="@color/txtPrincipal"
+        android:text="@string/tvCondición"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/iniVertical"
-        app:layout_constraintTop_toBottomOf="@+id/etCorreoRegistro" />
+        app:layout_constraintTop_toBottomOf="@+id/etEdadRegistroNino" />
 
-    <EditText
-        android:id="@+id/etTelefonoRegistro"
-        android:layout_width="300dp"
+    <Spinner
+        android:id="@+id/spnCondicionNino"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:fontFamily="@font/principal_font"
-        android:inputType="phone"
-        android:text="@string/examplePhone"
-        android:textColor="@color/txtSecundario"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toStartOf="@+id/finVertical"
+        android:layout_margin="16dp"
+        android:layout_marginTop="4dp"
+        android:spinnerMode="dropdown"
+        android:backgroundTint="@color/sombras"
+        style="@style/SpinnerTransparentStyle"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="@+id/iniVertical"
-        app:layout_constraintTop_toBottomOf="@+id/tvTelefonoRegistro" />
-
-    <TextView
-        android:id="@+id/tvContrasenaRegistro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/principal_font"
-        android:shadowColor="@color/sombras"
-        android:shadowDx="4"
-        android:shadowDy="2"
-        android:shadowRadius="2"
-        android:text="@string/tvContrasena"
-        android:textColor="@color/txtPrincipal"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="@+id/iniVertical"
-        app:layout_constraintTop_toBottomOf="@+id/etTelefonoRegistro" />
-
-    <EditText
-        android:id="@+id/etContrasenaRegistro"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:fontFamily="@font/principal_font"
-        android:inputType="textPassword"
-        android:text="@string/examplePassword"
-        android:textColor="@color/txtSecundario"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/q3Horizontal2"
-        app:layout_constraintEnd_toStartOf="@+id/finVertical"
-        app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintStart_toStartOf="@+id/iniVertical"
-        app:layout_constraintTop_toBottomOf="@+id/tvContrasenaRegistro"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/CondicionNino" />
 
     <Button
-        android:id="@+id/btnRegistrar"
+        android:id="@+id/btnRegistrarNino"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/btnPrincipal"
         android:fontFamily="@font/principal_font"
-        android:text="@string/btnRegistrar"
-        android:textColor="@color/txtPrincipal"
-        android:textSize="20dp"
-        android:textStyle="bold"
         android:shadowColor="@color/sombras"
         android:shadowDx="4"
         android:shadowDy="2"
         android:shadowRadius="2"
+        android:text="@string/btnRegistrarNino"
+        android:textColor="@color/txtPrincipal"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/finVertical"
         app:layout_constraintStart_toStartOf="@+id/iniVertical"
-        app:layout_constraintTop_toTopOf="@+id/q3Horizontal2" />
+        app:layout_constraintTop_toTopOf="@+id/q3Horizontal" />
 
     <Button
-        android:id="@+id/btnCancelar"
+        android:id="@+id/btnCancelarNino"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -290,12 +256,10 @@
         android:shadowRadius="2"
         android:text="@string/btnCancelar"
         android:textColor="@color/txtPrincipal"
-        android:textSize="20dp"
-        android:textStyle="bold"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/finVertical"
-        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="@+id/iniVertical"
-        app:layout_constraintTop_toBottomOf="@+id/btnRegistrar" />
-
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrarNino" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
