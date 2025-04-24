@@ -13,6 +13,12 @@
         android:theme="@style/Theme.CXT"
         tools:targetApi="31">
         <activity
+            android:name=".Consejo"
+            android:exported="false" />
+        <activity
+            android:name=".Home"
+            android:exported="false" />
+        <activity
             android:name=".RegistroNino"
             android:exported="false" />
         <activity

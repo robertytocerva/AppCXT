@@ -18,6 +18,12 @@ class Login : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_login)
         val btnRegistrar = findViewById<Button>(R.id.btnCrearCuenta)
+        val btnIgresar = findViewById<Button>(R.id.btnIngresar)
+
+        btnIgresar.setOnClickListener {
+            startActivity(Intent(this, Home::class.java))
+            finish()
+        }
         btnRegistrar.setOnClickListener {
             startActivity(Intent(this, Registro::class.java))
             finish()

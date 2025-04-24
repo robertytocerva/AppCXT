@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_inicio"
+        android:icon="@drawable/ic_home"
+        android:title="Inicio"/>
+    <item
+        android:id="@+id/nav_consejos"
+        android:icon="@drawable/ic_consejo"
+        android:title="Consejos"/>
+    <item
+        android:id="@+id/nav_progreso"
+        android:icon="@drawable/ic_progreso"
+        android:title="Progreso"/>
+    <item
+        android:id="@+id/nav_juego"
+        android:icon="@drawable/ic_juego"
+        android:title="Juego"/>
+    <item
+        android:id="@+id/nav_ajustes"
+        android:icon="@drawable/ic_settings"
+        android:title="Ajustes"/>
+</menu>
