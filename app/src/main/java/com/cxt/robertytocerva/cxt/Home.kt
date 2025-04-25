@@ -24,7 +24,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
                 R.id.nav_inicio -> true // Ya estamos aquí
                 R.id.nav_consejos -> {
                     startActivity(Intent(this, Consejo::class.java))
-                    //overridePendingTransition(0, 0) // Sin animación de transición
+                    overridePendingTransition(R.anim.slide_in_bottom, R.anim.slide_out_top)
+                    finish()
                     true
                 }
 

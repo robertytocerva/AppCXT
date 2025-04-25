@@ -4,17 +4,18 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- Paleta principal de la app -->
-    <color name="btnSecundario">#FF5252</color>
-    <color name="btnPrincipal">#69F0AE</color>
+    <color name="btnPrincipal">#85C1E9 </color>
+    <color name="btnSecundario">#DEE7E7</color>
     <color name="txtPrincipal">#263238</color>
     <color name="txtSecundario">#535657</color>
-    <color name="iconAcent">#FFAB40</color>
+   <!-- <color name="iconAcent">#FFAB40</color>-->
+    <color name="iconAcent">#DEE7E7</color>
     <color name="cardView">#E3F2FD</color>
     <color name="sombras">#1E88E5</color>
 
     <!-- Colores para gradientes fondo principal-->
     <color name="gradiente1">#42A5F5</color>
-    <color name="gradiente2">#FFCA28</color>
+    <color name="gradiente2">#DD83AD</color>
     <color name="gradiente3">#AB47BC</color>
     <color name="gradiente4">#26C6DA</color>
 

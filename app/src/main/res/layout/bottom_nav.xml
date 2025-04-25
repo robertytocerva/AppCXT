@@ -7,6 +7,6 @@
     android:layout_height="wrap_content"
     android:layout_gravity="bottom"
     android:background="#00FFFFFF"
-    app:itemIconTint="@color/iconAcent"
-    app:itemTextColor="@color/iconAcent"
+    app:itemIconTint="@color/btnSecundario"
+    app:itemTextColor="@color/btnSecundario"
     app:menu="@menu/menu_nav_inferior"/>

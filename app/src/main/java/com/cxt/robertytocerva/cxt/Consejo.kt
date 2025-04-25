@@ -23,7 +23,8 @@ class Consejo : AppCompatActivity() {
                 R.id.nav_consejos -> true // Ya estamos aquí
                 R.id.nav_inicio -> {
                     startActivity(Intent(this, Home::class.java))
-                    //overridePendingTransition(0, 0) // Sin animación de transición
+                    overridePendingTransition(R.anim.slide_in_bottom, R.anim.slide_out_top)
+                    finish()
                     true
                 }
 
