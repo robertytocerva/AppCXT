@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Sombra inferior simulada -->
+    <item android:right="8dp" android:left="8dp" android:top="8dp" android:bottom="0dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/sombras" /> <!-- Sombra negra con opacidad -->
+            <corners android:radius="20dp" />
+        </shape>
+    </item>
+
+    <!-- Cuerpo principal de la barra -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/iconAcent" /> <!-- Color claro como en tu imagen -->
+            <corners android:radius="20dp" />
+        </shape>
+    </item>
+
+</layer-list>

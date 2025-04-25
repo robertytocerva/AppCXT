@@ -20,28 +20,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".27"/>
+        app:layout_constraintGuide_percent="0.19" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/midHorizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".50"/>
+        app:layout_constraintGuide_percent="0.4" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/q3Horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.57" />
+        app:layout_constraintGuide_percent="0.66" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/finHorizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".95"/>
+        app:layout_constraintGuide_percent="0.92" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/iniVertical"
@@ -72,6 +72,210 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvHomeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bits_font"
+        android:textColor="@color/txtPrincipal"
+        android:shadowColor="@color/sombras"
+        android:shadowDx="5"
+        android:shadowDy="3"
+        android:shadowRadius="4"
+        android:text="@string/tvHomeTitle"
+        android:textSize="45sp"
+        app:layout_constraintStart_toStartOf="@+id/iniVertical"
+        app:layout_constraintTop_toTopOf="@+id/iniHorizontal" />
+
+    <TextView
+        android:id="@+id/tvHomeSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/principal_font"
+        android:shadowColor="@color/sombras"
+        android:shadowDx="4"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="@string/tvHomeSubtitle"
+        android:textColor="@color/txtSecundario"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/q1Horizontal"
+        app:layout_constraintStart_toStartOf="@+id/iniVertical"
+        app:layout_constraintTop_toBottomOf="@+id/tvHomeTitle"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintHorizontal_bias="1.0" />
+
+    <com.cxt.robertytocerva.cxt.recursos.CircularProgressView
+        android:id="@+id/indicador"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/finVertical"
+        app:layout_constraintStart_toStartOf="@+id/iniVertical"
+        app:layout_constraintTop_toTopOf="@+id/q1Horizontal" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="300dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/barra_decorativa_sombra"
+        app:layout_constraintEnd_toStartOf="@+id/finVertical"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="@+id/iniVertical"
+        app:layout_constraintTop_toTopOf="@+id/midHorizontal" />
+
+    <TextView
+        android:id="@+id/tvUltimaSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/bits_font"
+        android:shadowColor="@color/sombras"
+        android:shadowDx="5"
+        android:shadowDy="3"
+        android:shadowRadius="4"
+        android:text="@string/tvUltimaSesión"
+        android:textColor="@color/txtPrincipal"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@+id/finVertical"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/iniVertical"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewHome1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:backgroundTint="@color/btnPrincipal"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/q3Horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/finVertical"
+        app:layout_constraintStart_toStartOf="@+id/iniVertical"
+        app:layout_constraintTop_toBottomOf="@+id/tvUltimaSesion"
+        app:strokeWidth="0dp"> <!-- color similar al de tu imagen -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvNombreJugadorCV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/principal_font"
+                android:text="Pepe"
+                android:shadowColor="@color/sombras"
+                android:shadowDx="4"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:textColor="@color/txtPrincipal"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/tvJuegoCV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:text="Juego: Prototipo Juego 1"
+                android:textColor="@color/txtSecundario"
+                android:fontFamily="@font/principal_font"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvProgresoCV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:text="Tiempo de juego: 35 min."
+                android:fontFamily="@font/principal_font"
+                android:textColor="@color/txtSecundario"
+                android:textSize="18sp" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/principal_font"
+                android:text="Progreso: Nivel 5"
+                android:textColor="@color/txtSecundario"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="300dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/barra_decorativa_sombra"
+        app:layout_constraintEnd_toStartOf="@+id/finVertical"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="@+id/iniVertical"
+        app:layout_constraintTop_toBottomOf="@+id/q3Horizontal" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewHome2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="15dp"
+        app:strokeWidth="0dp"
+        android:backgroundTint="@color/btnPrincipal"
+        app:layout_constraintBottom_toTopOf="@+id/finHorizontal"
+        app:layout_constraintEnd_toStartOf="@+id/finVertical"
+        app:layout_constraintStart_toStartOf="@+id/iniVertical"
+        app:layout_constraintTop_toBottomOf="@+id/view2"> <!-- color similar al de tu imagen -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvTitleMotivation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/principal_font"
+                android:text="@string/tvMotivationTitle"
+                android:shadowColor="@color/sombras"
+                android:shadowDx="4"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:textColor="@color/txtPrincipal"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/tvMotivation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:text="@string/tvMotivation"
+                android:textAlignment="center"
+                android:fontFamily="@font/principal_font"
+                android:textColor="@color/txtSecundario"
+                android:textSize="18sp" />
+
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

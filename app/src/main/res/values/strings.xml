@@ -38,8 +38,12 @@
     <string name="l2">Mov. Limitada</string>
     <string name="l3">TDAH</string>
     <string name="l4">Autismo(Exsperimental)</string>
-    <string name="title_activity_home">Home</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+
+
+    <!--Home-->
+    <string name="tvHomeTitle">Bienvenido</string>
+    <string name="tvHomeSubtitle">¿Qué quieres hacer hoy?</string>
+    <string name="tvUltimaSesión">Última sesión:</string>
+    <string name="tvMotivationTitle">¡Recuerda!</string>
+    <string name="tvMotivation">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
 </resources>
