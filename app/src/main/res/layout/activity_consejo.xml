@@ -7,6 +7,63 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradiente_animado"
     tools:context=".Consejo">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/iniHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".05"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/q1Horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.19" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/midHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.41" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/q3Horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.66" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/finHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.92" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/iniVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/midVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5
+" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/finVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".9" />
+
 
     <include
         layout="@layout/bottom_nav"
@@ -18,14 +75,211 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvConsejoTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="256dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:fontFamily="@font/bits_font"
+        android:shadowColor="@color/sombras"
+        android:shadowDx="5"
+        android:shadowDy="3"
+        android:shadowRadius="4"
+        android:text="@string/tvConsejosTitle"
+        android:textColor="@color/txtPrincipal"
+        android:textSize="45sp"
+        app:layout_constraintEnd_toStartOf="@+id/finVertical"
+        app:layout_constraintStart_toStartOf="@+id/iniVertical"
+        app:layout_constraintTop_toTopOf="@+id/iniHorizontal" />
+
+    <TextView
+        android:id="@+id/tvConsejoSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/principal_font"
+        android:shadowColor="@color/sombras"
+        android:shadowDx="4"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="@string/tvConsejosSubtitle"
+        android:textColor="@color/txtSecundario"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/q1Horizontal"
+        app:layout_constraintStart_toStartOf="@+id/iniVertical"
+        app:layout_constraintTop_toBottomOf="@+id/tvConsejoTitle" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewConsejo1"
+        android:layout_width="300dp"
+        android:layout_height="180dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="15dp"
+        app:strokeWidth="0dp"
+        android:backgroundTint="@color/btnPrincipal"
+
+        app:layout_constraintEnd_toStartOf="@+id/finVertical"
+        app:layout_constraintStart_toStartOf="@+id/iniVertical"
+        app:layout_constraintTop_toBottomOf="@+id/q1Horizontal"> <!-- color similar al de tu imagen -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvTitleConseoCV1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/principal_font"
+                android:text="@string/tvConsejoTitle1"
+                android:shadowColor="@color/sombras"
+                android:shadowDx="4"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:textColor="@color/txtPrincipal"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/tvConseoCV1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:text="@string/tvConsejoResumen"
+                android:textAlignment="center"
+                android:fontFamily="@font/principal_font"
+                android:textColor="@color/txtSecundario"
+                android:textSize="18sp" />
+
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="300dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/barra_decorativa_sombra"
+        app:layout_constraintEnd_toStartOf="@+id/finVertical"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="@+id/iniVertical"
+        app:layout_constraintTop_toTopOf="@+id/midHorizontal" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewConsejo2"
+        android:layout_width="300dp"
+        android:layout_height="180dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="15dp"
+        app:strokeWidth="0dp"
+        android:backgroundTint="@color/btnPrincipal"
+
+        app:layout_constraintEnd_toStartOf="@+id/finVertical"
+        app:layout_constraintStart_toStartOf="@+id/iniVertical"
+        app:layout_constraintTop_toBottomOf="@+id/view"> <!-- color similar al de tu imagen -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvTitleConseoCV2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/principal_font"
+                android:text="@string/tvConsejoTitle2"
+                android:shadowColor="@color/sombras"
+                android:shadowDx="4"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:textColor="@color/txtPrincipal"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/tvConseoCV2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:text="@string/tvConsejoResumen"
+                android:textAlignment="center"
+                android:fontFamily="@font/principal_font"
+                android:textColor="@color/txtSecundario"
+                android:textSize="18sp" />
+
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="300dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/barra_decorativa_sombra"
+        app:layout_constraintEnd_toStartOf="@+id/finVertical"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="@+id/iniVertical"
+        app:layout_constraintTop_toTopOf="@+id/q3Horizontal" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewConsejo3"
+        android:layout_width="300dp"
+        android:layout_height="180dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="15dp"
+        app:strokeWidth="0dp"
+        android:backgroundTint="@color/btnPrincipal"
+        app:layout_constraintEnd_toStartOf="@+id/finVertical"
+        app:layout_constraintStart_toStartOf="@+id/iniVertical"
+        app:layout_constraintTop_toBottomOf="@+id/view2"> <!-- color similar al de tu imagen -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvTitleConseoCV3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/principal_font"
+                android:text="@string/tvConsejoTitle3"
+                android:shadowColor="@color/sombras"
+                android:shadowDx="4"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:textColor="@color/txtPrincipal"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/tvConseoCV3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:text="@string/tvConsejoResumen"
+                android:textAlignment="center"
+                android:fontFamily="@font/principal_font"
+                android:textColor="@color/txtSecundario"
+                android:textSize="18sp" />
+
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
