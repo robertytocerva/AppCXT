@@ -48,7 +48,7 @@
     <string name="tvMotivation">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do
                                 eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
 
-
+    <!--Consejo-->
     <string name="tvConsejosTitle">Consejos útiles</string>
     <string name="tvConsejosSubtitle">¿Necesitas ayuda?</string>"
     <string name="tvConsejoTitle1">Consejo 1</string>
@@ -72,4 +72,37 @@
         dignissim erat vitae, convallis odio. Nunc quis eros et dolor varius facilisis. Maecenas quam odio,
         mollis in egestas in, facilisis sit amet odio. Mauris in suscipit metus. Nullam id massa
         erat. Donec a leo vel augue fermentum pharetra id eget mauris.</string>
+    <!--Jugo-->
+    <string name="tvJugoTitle">¡Juguemos!</string>"
+    <string name="tvJugoSubtitle">!Mas diversion</string>
+    <string name="tvJuegoTitle1">Juego 1</string>
+    <string name="tvJuegoTitle2">Juego 2</string>
+    <string name="tvJuegoTitle3">Juego 3</string>
+    <string name="tvDescripcionJuego1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+        euismod, nisi sed mollis tristique, lectus metus cursus turpis, non varius urna lectus non
+        risus. Cras varius velit eu congue commodo. Sed felis quam, ultrices nec posuere at,
+        vestibulum congue dui. Aliquam tincidunt augue quis condimentum pharetra. Sed condimentum a
+        sem eget dapibus. Phasellus purus nisl, molestie vitae lectus molestie, faucibus lobortis
+        nisl. Proin sit amet diam tristique, maximus purus sed, molestie sapien. Donec at sem dui.
+        Cras pellentesque massa id pharetra tempus. Sed sed ornare nunc, et maximus sem.
+                            Aenean mattis metus vel eros finibus rhoncus. Cras varius ipsum id nisl
+        porttitor, non dignissim quam interdum. Etiam ut nulla ut urna dignissim accumsan ac quis diam.
+        Sed fringilla nulla tortor, vel dictum sem tempus ut. Sed luctus tellus et iaculis elementum.</string>
+    <string name="tvDescripciinJuego2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+        euismod, nisi sed mollis tristique, lectus metus cursus turpis, non varius urna lectus non
+        risus. Cras varius velit eu congue commodo. Sed felis quam, ultrices nec posuere at,
+        vestibulum congue dui. Aliquam tincidunt augue quis condimentum pharetra. Sed condimentum a
+        sem eget dapibus. Phasellus purus nisl, molestie vitae lectus molestie, faucibus lobortis
+        nisl. Proin sit amet diam tristique, maximus purus sed, molestie sapien. Donec at sem dui.
+        Cras pellentesque massa id pharetra tempus. Sed sed ornare nunc, et maximus sem.
+                            Aenean mattis metus vel eros finibus rhoncus. Cras varius ipsum id nisl
+        porttitor, non dignissim quam interdum. Etiam ut nulla ut urna dignissim accumsan ac quis diam.
+        Sed fringilla nulla tortor, vel dictum sem tempus ut. Sed luctus tellus et iaculis elementum.
+        Morbi sollicitudin lorem quis mi pellentesque bibendum. Sed ornare tortor nec lectus euismod tristique.
+        Sed dapibus enim mi, sit amet malesuada urna placerat at. Nunc facilisis, dolor ullamcorper laoreet molestie,
+        purus ipsum convallis enim, accumsan placerat lorem lacus et tellus. Cras sit amet est ullamcorper,
+        dignissim erat vitae, convallis odio. Nunc quis eros et dolor varius facilisis. Maecenas quam odio,
+        mollis in egestas in, facilisis sit amet odio. Mauris in suscipit metus.</string>
+
+
 </resources>

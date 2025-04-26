@@ -61,6 +61,7 @@ class DetalleConsejoActivity : AppCompatActivity() {
 
     override fun finish() {
         super.finish()
-        overridePendingTransition(android.R.anim.fade_in, R.anim.scale_exit)
+        //overridePendingTransition(android.R.anim.fade_in, R.anim.scale_exit) se desva al centro
+        overridePendingTransition(R.anim.slide_in_bottom, R.anim.slide_out_top)
     }
 }

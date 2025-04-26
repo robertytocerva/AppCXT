@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradiente_animado"
-    tools:context=".Consejo">
+    tools:context=".Juego">
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/iniHorizontal"
         android:layout_width="wrap_content"
@@ -75,7 +76,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/tvConsejoTitle"
+        android:id="@+id/tvJuegosTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/bits_font"
@@ -83,10 +84,10 @@
         android:shadowDx="5"
         android:shadowDy="3"
         android:shadowRadius="4"
-        android:text="@string/tvConsejosTitle"
+        android:text="@string/tvJugoTitle"
         android:textColor="@color/txtPrincipal"
         android:textSize="45sp"
-        app:layout_constraintEnd_toStartOf="@+id/finVertical"
+
         app:layout_constraintStart_toStartOf="@+id/iniVertical"
         app:layout_constraintTop_toTopOf="@+id/iniHorizontal" />
 
@@ -100,15 +101,15 @@
         android:shadowDx="4"
         android:shadowDy="2"
         android:shadowRadius="2"
-        android:text="@string/tvConsejosSubtitle"
+        android:text="@string/tvJugoSubtitle"
         android:textColor="@color/txtSecundario"
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/q1Horizontal"
         app:layout_constraintStart_toStartOf="@+id/iniVertical"
-        app:layout_constraintTop_toBottomOf="@+id/tvConsejoTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/tvJuegosTitle" />
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardViewConsejo1"
+        android:id="@+id/cardViewJuego1"
         android:layout_width="300dp"
         android:layout_height="180dp"
         android:layout_margin="16dp"
@@ -128,12 +129,12 @@
             android:padding="16dp">
 
             <TextView
-                android:id="@+id/tvTitleConseoCV1"
+                android:id="@+id/tvTitleJuegoCV1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/principal_font"
-                android:text="@string/tvConsejoTitle1"
+                android:text="@string/tvJuegoTitle1"
                 android:shadowColor="@color/sombras"
                 android:shadowDx="4"
                 android:shadowDy="2"
@@ -142,7 +143,7 @@
                 android:textSize="26sp" />
 
             <TextView
-                android:id="@+id/tvConseoCV1"
+                android:id="@+id/tvJuegoCV1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -170,7 +171,7 @@
         app:layout_constraintTop_toTopOf="@+id/midHorizontal" />
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardViewConsejo2"
+        android:id="@+id/cardViewJuego2"
         android:layout_width="300dp"
         android:layout_height="180dp"
         android:layout_margin="16dp"
@@ -190,12 +191,12 @@
             android:padding="16dp">
 
             <TextView
-                android:id="@+id/tvTitleConseoCV2"
+                android:id="@+id/tvTitleJuegoCV2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/principal_font"
-                android:text="@string/tvConsejoTitle2"
+                android:text="@string/tvJuegoTitle2"
                 android:shadowColor="@color/sombras"
                 android:shadowDx="4"
                 android:shadowDy="2"
@@ -204,7 +205,7 @@
                 android:textSize="26sp" />
 
             <TextView
-                android:id="@+id/tvConseoCV2"
+                android:id="@+id/tvJuegoCV2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -232,7 +233,7 @@
         app:layout_constraintTop_toTopOf="@+id/q3Horizontal" />
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardViewConsejo3"
+        android:id="@+id/cardViewJuego3"
         android:layout_width="300dp"
         android:layout_height="180dp"
         android:layout_margin="16dp"
@@ -251,12 +252,12 @@
             android:padding="16dp">
 
             <TextView
-                android:id="@+id/tvTitleConseoCV3"
+                android:id="@+id/tvTitleJuegoCV3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/principal_font"
-                android:text="@string/tvConsejoTitle3"
+                android:text="@string/tvJuegoTitle3"
                 android:shadowColor="@color/sombras"
                 android:shadowDx="4"
                 android:shadowDy="2"
@@ -265,7 +266,7 @@
                 android:textSize="26sp" />
 
             <TextView
-                android:id="@+id/tvConseoCV3"
+                android:id="@+id/tvJuegoCV3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -280,8 +281,4 @@
 
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
