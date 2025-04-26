@@ -105,4 +105,15 @@
         mollis in egestas in, facilisis sit amet odio. Mauris in suscipit metus.</string>
 
 
+    <!--Ajustes-->
+    <string name="tvAjustesTitle">Ajustes</string>
+    <string name="tvAjustesSubtitle">Modifica tus datos</string>
+    <string name="btnGuardarCambios">Guardar cambios</string>
+    <string name="btnCerrarSesion">Cerrar sesión</string>
+    <string name="tvDatosTutor">Datos tutor</string>
+    <string name="tvDatosNino">Datos niño</string>
+    <string name="toastGuardar">Cambios guardados</string>
+
+
+
 </resources>
