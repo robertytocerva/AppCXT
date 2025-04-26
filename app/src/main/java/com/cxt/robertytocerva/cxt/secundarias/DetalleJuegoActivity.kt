@@ -25,8 +25,8 @@ class DetalleJuegoActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.tvJuegoCompleto).text = contenido
 
 
-        val flecha = findViewById<View>(R.id.vwArrowJuego)
-        flecha.setOnClickListener {
+        val flechaJuego = findViewById<View>(R.id.vwArrowJuego)
+        flechaJuego.setOnClickListener {
             startActivity(Intent(this, Juego::class.java))
             finish()
         }

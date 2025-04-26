@@ -13,6 +13,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.cxt.robertytocerva.cxt.secundarias.DetalleConsejoActivity
+import com.cxt.robertytocerva.cxt.secundarias.DetalleJuegoActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.card.MaterialCardView
 
@@ -57,7 +58,7 @@ class Juego : AppCompatActivity() {
 
         val card1 = findViewById<MaterialCardView>(R.id.cardViewJuego1)
         card1.setOnClickListener {
-            val intent = Intent(this, DetalleConsejoActivity::class.java)
+            val intent = Intent(this, DetalleJuegoActivity::class.java)
             intent.putExtra("titulo", "Juego 1")
             intent.putExtra("contenido", ContextCompat.getString(this, R.string.tvDescripcionJuego1))
 
@@ -74,7 +75,7 @@ class Juego : AppCompatActivity() {
 
         val card2 = findViewById<MaterialCardView>(R.id.cardViewJuego2)
         card2.setOnClickListener {
-            val intent = Intent(this, DetalleConsejoActivity::class.java)
+            val intent = Intent(this, DetalleJuegoActivity::class.java)
             intent.putExtra("titulo", "Juego 2")
             intent.putExtra("contenido", ContextCompat.getString(this, R.string.tvDescripciinJuego2))
             val options = ActivityOptionsCompat.makeScaleUpAnimation(
@@ -88,7 +89,7 @@ class Juego : AppCompatActivity() {
         }
         val card3 = findViewById<MaterialCardView>(R.id.cardViewJuego3)
         card3.setOnClickListener {
-            val intent = Intent(this, DetalleConsejoActivity::class.java)
+            val intent = Intent(this, DetalleJuegoActivity::class.java)
             intent.putExtra("titulo", "Juego 3")
             intent.putExtra("contenido", ContextCompat.getString(this, R.string.tvDescripcionJuego1))
             val options = ActivityOptionsCompat.makeScaleUpAnimation(
