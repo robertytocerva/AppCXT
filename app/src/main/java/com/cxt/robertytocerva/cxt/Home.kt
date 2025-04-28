@@ -5,19 +5,44 @@ import android.graphics.drawable.TransitionDrawable
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.cxt.robertytocerva.cxt.api.NameNinoRequest
+import com.cxt.robertytocerva.cxt.api.RetrofitClient
+import com.cxt.robertytocerva.cxt.api.SesionRequest
 import com.cxt.robertytocerva.cxt.recursos.CircularProgressView
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
  class Home : AppCompatActivity() {
      val porcentajeProgreso = 0.7f
+     private lateinit var tvNombreJugadorCV: TextView
+     private lateinit var tvJuegoCV: TextView
+     private lateinit var tvTiempoJuegoCV: TextView
+     private lateinit var tvProgresoCV: TextView
+     private lateinit var tvMotivation: TextView
+     private lateinit var tvMotivationAutor: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_home)
         gradientAnimation()
+        tvNombreJugadorCV = findViewById(R.id.tvNombreJugadorCV)
+        tvJuegoCV = findViewById(R.id.tvJuegoCV)
+        tvTiempoJuegoCV = findViewById(R.id.tvTiempoJuegoCV)
+        tvProgresoCV = findViewById(R.id.tvProgresoCV)
+        tvMotivation = findViewById(R.id.tvMotivation)
+        tvMotivationAutor = findViewById(R.id.tvMotivationAutor)
+
+        obtenerNombreNino(Globales.correo_electronico)
+        obtenerFrase()
+        obtenerUltimaSesion(Globales.correo_electronico)
+
         //----------Inicio menu------------
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav_include)
 
@@ -41,7 +66,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
                 }
                 R.id.nav_ajustes -> {
                     startActivity(Intent(this, Ajustes::class.java))
-                    overridePendingTransition(R.anim.slide_in_bottom, R.anim.slide_out_top)
+                     overridePendingTransition(R.anim.slide_in_bottom, R.anim.slide_out_top)
                     finish()
                     true
                 }
@@ -78,5 +103,54 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
          }
 
          handler.post(runnable)
+     }
+
+     private fun obtenerFrase() {
+         CoroutineScope(Dispatchers.IO).launch {
+             try {
+                 val frase = RetrofitClient.apiService.obtenerFrase()
+                 runOnUiThread {
+                     tvMotivation.text = "\"${frase.frase}\""
+                     tvMotivationAutor.text = "- ${frase.autor}"
+                 }
+             } catch (e: Exception) {
+                 runOnUiThread {
+                     Toast.makeText(this@Home, "Error al obtener la frase", Toast.LENGTH_SHORT).show()
+                 }
+             }
+         }
+     }
+
+     private fun obtenerUltimaSesion(correo: String) {
+         CoroutineScope(Dispatchers.IO).launch {
+             try {
+                 val sesion = RetrofitClient.apiService.obtenerUltimaSesion(SesionRequest(correo))
+                 runOnUiThread {
+                     //tvNombreJugadorCV.text = Globales.nombre_nino falta obtener el nombre del niño
+                     tvJuegoCV.text = "Juego: ${sesion.nombre_juego.toString()}"
+                     tvTiempoJuegoCV.text = "Fecha: ${sesion.fecha_de_sesion.substring(0,10)}"
+                     tvProgresoCV.text = "Puntos: ${sesion.puntos_por_juego.toString()}"
+                 }
+             } catch (e: Exception) {
+                 runOnUiThread {
+                     Toast.makeText(this@Home, "Error al obtener sesión", Toast.LENGTH_SHORT).show()
+                 }
+             }
+         }
+     }
+
+     private fun obtenerNombreNino(correo: String) {
+         CoroutineScope(Dispatchers.IO).launch {
+             try {
+                 val nameNino = RetrofitClient.apiService.obtenerNombreNino(NameNinoRequest(correo))
+                 runOnUiThread {
+                     tvNombreJugadorCV.text = nameNino.nombre
+                 }
+             } catch (e: Exception) {
+                 runOnUiThread {
+                     Toast.makeText(this@Home, "Error al obtener nombre", Toast.LENGTH_SHORT).show()
+                 }
+             }
+         }
      }
 }

@@ -12,5 +12,12 @@ interface ApiService {
     suspend fun agregarTutor(@Body nuevoTutor: TutorEnvio): retrofit2.Response<Void>
     @POST("agregarNino")
     suspend fun agregarNino(@Body nuevoNino: NinoRegistro): retrofit2.Response<Void>
+    @GET("frase")
+    suspend fun obtenerFrase(): Frase
+    @POST("ultima-sesion")
+    suspend fun obtenerUltimaSesion(@Body sesionRequest: SesionRequest): Sesion
+    @POST("nombre-nino")
+    suspend fun obtenerNombreNino(@Body nameNinoRequest: NameNinoRequest): NameNino
+
 
 }

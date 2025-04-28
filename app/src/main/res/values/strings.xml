@@ -45,8 +45,8 @@
     <string name="tvHomeSubtitle">¿Qué quieres hacer hoy?</string>
     <string name="tvUltimaSesión">Última sesión:</string>
     <string name="tvMotivationTitle">¡Recuerda!</string>
-    <string name="tvMotivation">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do
-                                eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="tvMotivation">No siempre puedes ser el mejor. Pero puedes dar lo mejor de ti</string>
+    <string name="tvMotivationAutor">Sebastian Vettel</string>
 
     <!--Consejo-->
     <string name="tvConsejosTitle">Consejos útiles</string>
