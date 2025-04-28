@@ -3,6 +3,7 @@ import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.PUT
 
 interface ApiService {
 
@@ -18,6 +19,20 @@ interface ApiService {
     suspend fun obtenerUltimaSesion(@Body sesionRequest: SesionRequest): Sesion
     @POST("nombre-nino")
     suspend fun obtenerNombreNino(@Body nameNinoRequest: NameNinoRequest): NameNino
+    @POST("progreso-home")
+    suspend fun obtenerProgresoHome(@Body progresoHomeRequest: ProgresoHomeRequest): ProgresoHome
+    @GET("juegos")
+    suspend fun obtenerJuegos(): List<Juego>
+    @POST("buscarTutor")
+    suspend fun buscarTutor(@Body correo: TutorRequest): Tutor
+    @POST("buscarNino")
+    suspend fun buscarNino(@Body correo: NinoRequest): Nino
+    @PUT("actualizarNino")
+    suspend fun actualizarNino(@Body actualizarNinoRequest: ActualizarNinoRequest): retrofit2.Response<Void>
+    @PUT("actualizarTutor")
+    suspend fun actualizarTutor(@Body actualizarTutorRequest: ActualizarTutorRequest): retrofit2.Response<Void>
+
+
 
 
 }

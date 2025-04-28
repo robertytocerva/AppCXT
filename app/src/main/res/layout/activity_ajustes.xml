@@ -282,7 +282,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:fontFamily="@font/bits_font"
-                        android:text="@string/tvDatosTutor"
+                        android:text="@string/tvDatosNino"
                         android:shadowColor="@color/sombras"
                         android:shadowDx="4"
                         android:shadowDy="2"

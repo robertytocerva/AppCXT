@@ -11,6 +11,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.cxt.robertytocerva.cxt.api.NameNinoRequest
+import com.cxt.robertytocerva.cxt.api.ProgresoHomeRequest
 import com.cxt.robertytocerva.cxt.api.RetrofitClient
 import com.cxt.robertytocerva.cxt.api.SesionRequest
 import com.cxt.robertytocerva.cxt.recursos.CircularProgressView
@@ -20,7 +21,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
  class Home : AppCompatActivity() {
-     val porcentajeProgreso = 0.7f
+     var porcentajeProgreso = 0.0f
+     var progreso =0.0f
      private lateinit var tvNombreJugadorCV: TextView
      private lateinit var tvJuegoCV: TextView
      private lateinit var tvTiempoJuegoCV: TextView
@@ -38,7 +40,7 @@ import kotlinx.coroutines.launch
         tvProgresoCV = findViewById(R.id.tvProgresoCV)
         tvMotivation = findViewById(R.id.tvMotivation)
         tvMotivationAutor = findViewById(R.id.tvMotivationAutor)
-
+        obtenerProgresoHome(Globales.correo_electronico)
         obtenerNombreNino(Globales.correo_electronico)
         obtenerFrase()
         obtenerUltimaSesion(Globales.correo_electronico)
@@ -75,9 +77,9 @@ import kotlinx.coroutines.launch
             }
         }//----------Fin menu------------
         //----------Inicio indicador------------
-        val indicador = findViewById<CircularProgressView>(R.id.indicador)
-        indicador.progreso = porcentajeProgreso
-        indicador.max = 10
+//        val indicador = findViewById<CircularProgressView>(R.id.indicador)
+//        indicador.progreso = porcentajeProgreso
+//        indicador.max = 10
         //----------Fin indicador------------
 
     }
@@ -149,6 +151,27 @@ import kotlinx.coroutines.launch
              } catch (e: Exception) {
                  runOnUiThread {
                      Toast.makeText(this@Home, "Error al obtener nombre", Toast.LENGTH_SHORT).show()
+                 }
+             }
+         }
+     }
+     private fun obtenerProgresoHome(correo: String)  {
+
+         CoroutineScope(Dispatchers.IO).launch {
+             try {
+                 val progresoHome =
+                     RetrofitClient.apiService.obtenerProgresoHome(ProgresoHomeRequest(correo))
+                 runOnUiThread {
+                     progreso = progresoHome.niveles_de_progreso.toFloat()/10.0f
+                     porcentajeProgreso = progreso
+                     val indicador = findViewById<CircularProgressView>(R.id.indicador)
+                     indicador.max = 10
+                     indicador.progreso = porcentajeProgreso
+                     //Toast.makeText(this@Home, progreso.toString(), Toast.LENGTH_SHORT).show()
+                 }
+             }catch (e: Exception) {
+                 runOnUiThread {
+                     Toast.makeText(this@Home, "Error al obtener progreso", Toast.LENGTH_SHORT).show()
                  }
              }
          }

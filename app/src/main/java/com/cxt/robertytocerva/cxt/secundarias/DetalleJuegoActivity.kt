@@ -18,11 +18,14 @@ class DetalleJuegoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_detalle_juego)
-        val titulo = intent.getStringExtra("titulo") ?: "Sin título"
-        val contenido = intent.getStringExtra("contenido") ?: "Sin contenido"
+        val nombreJuego = intent.getStringExtra("nombre_juego")
+        val descripcionCompleta = intent.getStringExtra("descripcion_completa")
 
-        findViewById<TextView>(R.id.tvTitleJuegoCompleto).text = titulo
-        findViewById<TextView>(R.id.tvJuegoCompleto).text = contenido
+        val textNombreJuego = findViewById<TextView>(R.id.tvTitleJuegoCompleto)
+        val textDescripcionCompleta = findViewById<TextView>(R.id.tvJuegoCompleto)
+
+        textNombreJuego.text = nombreJuego
+        textDescripcionCompleta.text = descripcionCompleta
 
 
         val flechaJuego = findViewById<View>(R.id.vwArrowJuego)

@@ -140,6 +140,7 @@
                 android:shadowDy="2"
                 android:shadowRadius="2"
                 android:textColor="@color/txtPrincipal"
+                android:textAllCaps="false"
                 android:textSize="26sp" />
 
             <TextView
@@ -152,6 +153,7 @@
                 android:textAlignment="center"
                 android:fontFamily="@font/principal_font"
                 android:textColor="@color/txtSecundario"
+                android:textAllCaps="false"
                 android:textSize="18sp" />
 
 
@@ -202,6 +204,7 @@
                 android:shadowDy="2"
                 android:shadowRadius="2"
                 android:textColor="@color/txtPrincipal"
+                android:textAllCaps="false"
                 android:textSize="26sp" />
 
             <TextView
@@ -214,6 +217,7 @@
                 android:textAlignment="center"
                 android:fontFamily="@font/principal_font"
                 android:textColor="@color/txtSecundario"
+                android:textAllCaps="false"
                 android:textSize="18sp" />
 
 
@@ -263,6 +267,7 @@
                 android:shadowDy="2"
                 android:shadowRadius="2"
                 android:textColor="@color/txtPrincipal"
+                android:textAllCaps="false"
                 android:textSize="26sp" />
 
             <TextView
@@ -275,6 +280,7 @@
                 android:textAlignment="center"
                 android:fontFamily="@font/principal_font"
                 android:textColor="@color/txtSecundario"
+                android:textAllCaps="false"
                 android:textSize="18sp" />
 
 
