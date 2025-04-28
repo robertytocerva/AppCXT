@@ -10,4 +10,8 @@ object Globales {
     var telefono_tutor: String = ""
     var contrasena_tutor: String = ""
 
+    var nombre_nino: String = ""
+
+
+
 }

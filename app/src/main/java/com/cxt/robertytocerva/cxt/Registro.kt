@@ -15,19 +15,25 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class Registro : AppCompatActivity() {
-
+    private lateinit var etNameRegistro: EditText
+    private lateinit var etApellidoRegistro: EditText
+    private lateinit var etCorreoRegistro: EditText
+    private lateinit var etTelefonoRegistro: EditText
+    private lateinit var etContrasenaRegistro: EditText
+    private lateinit var btnRegistrar: Button
+    private lateinit var btnCancelar: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro)
         enableEdgeToEdge()
 
-         val etNameRegistro = findViewById<EditText>(R.id.etNameRegistro)
-         val etApellidoRegistro = findViewById<EditText>(R.id.etApellidoRegistro)
-         val etCorreoRegistro = findViewById<EditText>(R.id.etCorreoRegistro)
-         val etTelefonoRegistro = findViewById<EditText>(R.id.etTelefonoRegistro)
-         val etContrasenaRegistro = findViewById<EditText>(R.id.etContrasenaRegistro)
-         val btnRegistrar = findViewById<Button>(R.id.btnRegistrar)
-         val btnCancelar = findViewById<Button>(R.id.btnCancelar)
+         etNameRegistro = findViewById<EditText>(R.id.etNameRegistro)
+         etApellidoRegistro = findViewById<EditText>(R.id.etApellidoRegistro)
+         etCorreoRegistro = findViewById<EditText>(R.id.etCorreoRegistro)
+         etTelefonoRegistro = findViewById<EditText>(R.id.etTelefonoRegistro)
+         etContrasenaRegistro = findViewById<EditText>(R.id.etContrasenaRegistro)
+         btnRegistrar = findViewById<Button>(R.id.btnRegistrar)
+         btnCancelar = findViewById<Button>(R.id.btnCancelar)
         etNameRegistro.setOnFocusChangeListener { _, hasFocus ->
             if (hasFocus) {
                 etNameRegistro.text.clear()
@@ -50,12 +56,17 @@ class Registro : AppCompatActivity() {
         }
         etContrasenaRegistro.setOnFocusChangeListener { _, hasFocus ->
             if (hasFocus) {
-                etCorreoRegistro.text.clear()
+                etContrasenaRegistro.text.clear()
             }
 
         }
 
         btnRegistrar.setOnClickListener {
+            Globales.nombre_tutor = etNameRegistro.text.toString()
+            Globales.apellido_tutor = etApellidoRegistro.text.toString()
+            Globales.correo_electronico = etCorreoRegistro.text.toString()
+            Globales.telefono_tutor = etTelefonoRegistro.text.toString()
+            Globales.contrasena_tutor = etContrasenaRegistro.text.toString()
             startActivity(Intent(this, RegistroNino::class.java))
             finish()
         }
