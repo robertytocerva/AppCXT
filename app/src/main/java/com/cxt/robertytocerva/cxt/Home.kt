@@ -165,7 +165,7 @@ import kotlinx.coroutines.launch
                      progreso = progresoHome.niveles_de_progreso.toFloat()/10.0f
                      porcentajeProgreso = progreso
                      val indicador = findViewById<CircularProgressView>(R.id.indicador)
-                     indicador.max = 10
+                     indicador.max = Globales.act_week
                      indicador.progreso = porcentajeProgreso
                      //Toast.makeText(this@Home, progreso.toString(), Toast.LENGTH_SHORT).show()
                  }

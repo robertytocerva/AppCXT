@@ -12,6 +12,8 @@ object Globales {
 
     var nombre_nino: String = ""
 
+    var act_week: Int = 12
+
 
 
 }
