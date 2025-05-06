@@ -186,7 +186,7 @@
 
     <EditText
         android:id="@+id/etEdadRegistroNino"
-        android:layout_width="300dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:fontFamily="@font/principal_font"
@@ -194,7 +194,8 @@
         android:text="00"
         android:textColor="@color/txtSecundario"
         android:textSize="15sp"
-        app:layout_constraintEnd_toStartOf="@+id/finVertical"
+
+        app:layout_constraintEnd_toStartOf="@+id/midVertical"
         app:layout_constraintStart_toStartOf="@+id/iniVertical"
         app:layout_constraintTop_toBottomOf="@+id/tvEdadRegistroNino" />
 
@@ -261,5 +262,39 @@
         app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="@+id/iniVertical"
         app:layout_constraintTop_toBottomOf="@+id/btnRegistrarNino" />
+    <!--
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/principal_font"
+        android:shadowColor="@color/sombras"
+        android:shadowDx="4"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="@string/tvActWeek"
+
+        android:textColor="@color/txtPrincipal"
+        android:textSize="20sp"
+
+        app:layout_constraintStart_toStartOf="@+id/midVertical"
+        app:layout_constraintTop_toBottomOf="@+id/etApellidoRegistroNino" />
+
+    <EditText
+        android:id="@+id/etActWeek"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/principal_font"
+        android:inputType="number"
+        android:text="10"
+        android:textColor="@color/txtSecundario"
+        android:textSize="15sp"
+
+        app:layout_constraintEnd_toStartOf="@+id/finVertical"
+        app:layout_constraintStart_toStartOf="@+id/midVertical"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

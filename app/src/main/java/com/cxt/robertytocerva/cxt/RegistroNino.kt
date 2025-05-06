@@ -29,6 +29,7 @@ class RegistroNino : AppCompatActivity() {
     private lateinit var etEdadRegistroNino: EditText
     private lateinit var btnRegistrarNino: Button
     private lateinit var btnCancelarNino: Button
+    private lateinit var etActWeek: EditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -72,6 +73,7 @@ class RegistroNino : AppCompatActivity() {
         etEdadRegistroNino = findViewById<EditText>(R.id.etEdadRegistroNino)
         btnRegistrarNino = findViewById<Button>(R.id.btnRegistrarNino)
         btnCancelarNino = findViewById<Button>(R.id.btnCancelarNino)
+        //etActWeek = findViewById<EditText>(R.id.etActWeek)
 
         //listeners
         etNameRegistroNino.setOnFocusChangeListener { _, hasFocus ->
@@ -91,8 +93,10 @@ class RegistroNino : AppCompatActivity() {
 
         }
         btnRegistrarNino.setOnClickListener {
+            //Globales.act_week = etActWeek.text.toString().toInt()
             registrarTutor()
             registrarNino()
+
         }
         btnCancelarNino.setOnClickListener {
             startActivity(Intent(this, Login::class.java))
