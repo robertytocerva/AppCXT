@@ -152,6 +152,7 @@ import kotlinx.coroutines.launch
                  val nameNino = RetrofitClient.apiService.obtenerNombreNino(NameNinoRequest(correo))
                  runOnUiThread {
                      tvNombreJugadorCV.text = nameNino.nombre
+                     Globales.nombre_nino = nameNino.nombre
                  }
              } catch (e: Exception) {
                  runOnUiThread {
@@ -172,7 +173,7 @@ import kotlinx.coroutines.launch
                      val indicador = findViewById<CircularProgressView>(R.id.indicador)
                      indicador.max = 10
                      indicador.progreso = porcentajeProgreso
-                     Toast.makeText(this@Home, progreso.toString(), Toast.LENGTH_SHORT).show()
+                     //Toast.makeText(this@Home, progreso.toString(), Toast.LENGTH_SHORT).show()
                  }
              }catch (e: Exception) {
                  runOnUiThread {

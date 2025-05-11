@@ -139,7 +139,7 @@
                             android:layout_marginTop="8dp"
                             android:fontFamily="@font/principal_font"
                             android:text="@string/tvDescripcionJuego1"
-                            android:textAlignment="center"
+
                             android:shadowColor="@color/sombras"
                             android:shadowDx="4"
                             android:shadowDy="2"

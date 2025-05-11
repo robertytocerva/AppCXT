@@ -11,6 +11,7 @@ object Globales {
     var contrasena_tutor: String = ""
 
     var nombre_nino: String =  ""
+    var id_nino: Int = 0
 
     var act_week: Int = 12
 

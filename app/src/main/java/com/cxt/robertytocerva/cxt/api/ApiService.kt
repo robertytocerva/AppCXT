@@ -31,6 +31,12 @@ interface ApiService {
     suspend fun actualizarNino(@Body actualizarNinoRequest: ActualizarNinoRequest): retrofit2.Response<Void>
     @PUT("actualizarTutor")
     suspend fun actualizarTutor(@Body actualizarTutorRequest: ActualizarTutorRequest): retrofit2.Response<Void>
+    @POST("mejor-sesion")
+    suspend fun obtenerMejorSesion(@Body correoRequest: TutorRequest): MejorSesionResponse
+    @POST("progreso-nino")
+    suspend fun obtenerProgresoPorNino(@Body request: IdNinoRequest): ProgresoNinoResponse
+
+
 
 
 

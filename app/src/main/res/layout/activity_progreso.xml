@@ -165,6 +165,16 @@
                 android:fontFamily="@font/bits_font"
                 android:textSize="100sp" />
 
+            <TextView
+                android:id="@+id/tvFechaProgresoCV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/principal_font"
+                android:text="0000/00/00"
+                android:textColor="@color/txtSecundario"
+                android:textSize="18sp" />
+
 
 
         </LinearLayout>
@@ -248,7 +258,7 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/tvTiempoJuegoProgresoCV"
+                android:id="@+id/tvPuntosProgresoCV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
