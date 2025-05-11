@@ -115,5 +115,13 @@
     <string name="tvDatosNino">Datos niño</string>
     <string name="toastGuardar">Cambios guardados</string>
 
+    <!--Progreso-->
+    <string name="tvProgresoTitle">Progreso</string>
+    <string name="tvProgresoSubtitle">¿Cómo va tu progreso?</string>
+    <string name="tvGameScore">Game Score: 000</string>
+    <string name="tvNivel">35</string>"
+    <string name="tvNivelTitle">Niveles Completados</string>"
+    <string name="tvBestSesion">Mejor sesión</string>"
+
 
 </resources>

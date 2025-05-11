@@ -70,6 +70,12 @@ class Juego : AppCompatActivity() {
                     finish()
                     true
                 }
+                R.id.nav_progreso -> {
+                    startActivity(Intent(this, Progreso::class.java))
+                    overridePendingTransition(R.anim.slide_in_bottom, R.anim.slide_out_top)
+                    finish()
+                    true
+                }
 
                 else -> false
             }
