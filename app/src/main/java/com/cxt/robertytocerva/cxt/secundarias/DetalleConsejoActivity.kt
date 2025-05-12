@@ -23,10 +23,12 @@ class DetalleConsejoActivity : AppCompatActivity() {
         gradientAnimation()
 
         val titulo = intent.getStringExtra("titulo") ?: "Sin título"
-        val contenido = intent.getStringExtra("contenido") ?: "Sin contenido"
+        val contenido = intent.getStringExtra("recomdacion_completa") ?: "Sin contenido"
+        val autor = intent.getStringExtra("autor") ?: "Sin autor"
 
         findViewById<TextView>(R.id.tvTitleConseoCompleto).text = titulo
         findViewById<TextView>(R.id.tvConseoCompleto).text = contenido
+        findViewById<TextView>(R.id.tvConsejoAutor).text = autor
 
         val flecha = findViewById<View>(R.id.vwArrow)
         flecha.setOnClickListener {

@@ -14,6 +14,7 @@ import com.cxt.robertytocerva.cxt.api.NameNinoRequest
 import com.cxt.robertytocerva.cxt.api.ProgresoHomeRequest
 import com.cxt.robertytocerva.cxt.api.RetrofitClient
 import com.cxt.robertytocerva.cxt.api.SesionRequest
+import com.cxt.robertytocerva.cxt.api.TutorRequest
 import com.cxt.robertytocerva.cxt.recursos.CircularProgressView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.coroutines.CoroutineScope
@@ -44,6 +45,7 @@ import kotlinx.coroutines.launch
         obtenerNombreNino(Globales.correo_electronico)
         obtenerFrase()
         obtenerUltimaSesion(Globales.correo_electronico)
+        obtenerDiscapacidad(Globales.correo_electronico)
 
         //----------Inicio menu------------
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav_include)
@@ -157,6 +159,22 @@ import kotlinx.coroutines.launch
              } catch (e: Exception) {
                  runOnUiThread {
                      Toast.makeText(this@Home, "Error al obtener nombre", Toast.LENGTH_SHORT).show()
+                 }
+             }
+         }
+     }
+
+     private fun obtenerDiscapacidad(correo:String){
+         CoroutineScope(Dispatchers.IO).launch {
+             try {
+                 val discapacidad = RetrofitClient.apiService.obtenerDiscapacidad(TutorRequest(correo))
+                 runOnUiThread {
+                     Globales.id_discapacidad = discapacidad.id_discapacidad
+                     //Toast.makeText(this@Home, Globales.id_discapacidad.toString(), Toast.LENGTH_SHORT).show()
+                 }
+             }catch (e: Exception){
+                 runOnUiThread {
+                     Toast.makeText(this@Home, "Error al obtener discapacidad", Toast.LENGTH_SHORT).show()
                  }
              }
          }

@@ -132,6 +132,21 @@
                             android:textSize="26sp" />
 
                         <TextView
+                            android:id="@+id/tvConsejoAutor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/principal_font"
+                            android:text="Autor"
+                            android:shadowColor="@color/sombras"
+                            android:shadowDx="4"
+                            android:shadowDy="2"
+                            android:shadowRadius="2"
+                            android:textAlignment="center"
+                            android:textColor="@color/txtSecundario"
+                            android:textSize="18sp" />
+
+                        <TextView
                             android:id="@+id/tvConseoCompleto"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -141,7 +156,7 @@
                             android:text="@string/tvConsejo"
                             android:textAlignment="center"
                             android:textColor="@color/txtSecundario"
-                            android:textSize="18sp" />
+                            android:textSize="20sp" />
 
 
                     </LinearLayout>

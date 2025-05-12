@@ -12,6 +12,7 @@ object Globales {
 
     var nombre_nino: String =  ""
     var id_nino: Int = 0
+    var id_discapacidad: Int = 0
 
     var act_week: Int = 12
 

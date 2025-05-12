@@ -105,7 +105,7 @@ class Progreso : AppCompatActivity() {
                 val respuesta = RetrofitClient.apiService.obtenerMejorSesion(TutorRequest(correo))
                 runOnUiThread {
                     Globales.id_nino = respuesta.id_nino
-                    Toast.makeText(this@Progreso, "id nino: ${Globales.id_nino}", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(this@Progreso, "id nino: ${Globales.id_nino}", Toast.LENGTH_SHORT).show()
                     findViewById<TextView>(R.id.tvNombreJugadorProgresoCV).text = Globales.nombre_nino
                     findViewById<TextView>(R.id.tvJuegoProgresoCV).text = "Juego: ${respuesta.nombre_juego}"
                     findViewById<TextView>(R.id.tvProgresoProgresoCV).text = "Progreso: ${respuesta.nivel_actual}"

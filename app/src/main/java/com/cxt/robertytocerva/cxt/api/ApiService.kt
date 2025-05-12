@@ -35,6 +35,11 @@ interface ApiService {
     suspend fun obtenerMejorSesion(@Body correoRequest: TutorRequest): MejorSesionResponse
     @POST("progreso-nino")
     suspend fun obtenerProgresoPorNino(@Body request: IdNinoRequest): ProgresoNinoResponse
+    @POST("discapacidad")
+    suspend fun obtenerDiscapacidad(@Body request: TutorRequest): DiscapacidadResponse
+    @POST("recomendaciones")
+    suspend fun obtenerRecomendaciones(@Body request: DiscapacidadRequest): List<RecomendacionResponse>
+
 
 
 

@@ -149,6 +149,10 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/tvConsejoResumen"
                 android:textAlignment="center"
+                android:shadowColor="@color/sombras"
+                android:shadowDx="4"
+                android:shadowDy="2"
+                android:shadowRadius="2"
                 android:fontFamily="@font/principal_font"
                 android:textColor="@color/txtSecundario"
                 android:textSize="18sp" />
@@ -211,6 +215,10 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/tvConsejoResumen"
                 android:textAlignment="center"
+                android:shadowColor="@color/sombras"
+                android:shadowDx="4"
+                android:shadowDy="2"
+                android:shadowRadius="2"
                 android:fontFamily="@font/principal_font"
                 android:textColor="@color/txtSecundario"
                 android:textSize="18sp" />
@@ -272,6 +280,10 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/tvConsejoResumen"
                 android:textAlignment="center"
+                android:shadowColor="@color/sombras"
+                android:shadowDx="4"
+                android:shadowDy="2"
+                android:shadowRadius="2"
                 android:fontFamily="@font/principal_font"
                 android:textColor="@color/txtSecundario"
                 android:textSize="18sp" />
